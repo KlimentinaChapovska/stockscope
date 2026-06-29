@@ -45,3 +45,6 @@ desktop.ini
 # Streamlit stdout / stderr capture files created during development
 se*.txt
 so*.txt
+
+# Playwright MCP output (test artifacts, not application code)
+.playwright-mcp/

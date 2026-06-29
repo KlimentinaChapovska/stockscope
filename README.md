@@ -4,7 +4,7 @@
 
 StockScope is a beginner-friendly Streamlit application for exploring and comparing the historical performance of six major technology companies. It combines interactive data visualisation, a hypothetical investment calculator, plain-language insights, and a separate real-world market snapshot — all in a single, clean interface.
 
-**Live app:** Coming after deployment  
+**Live app:** [stockscope-fwwhj7hbjgnkpky4zgmmrs.streamlit.app](https://stockscope-fwwhj7hbjgnkpky4zgmmrs.streamlit.app/)  
 **Repository:** [github.com/KlimentinaChapovska/stockscope](https://github.com/KlimentinaChapovska/stockscope)
 
 ---
@@ -125,9 +125,7 @@ This project was built with Claude Code and the following MCP (Model Context Pro
 | **Fetch** | Retrieved and verified the company fact used in the Insights tab from an official source |
 | **GitHub** | Published and manages the public repository |
 | **Mermaid** | Generated and validated the architecture diagram above |
-| **Playwright** | Will test and screenshot the deployed application |
-
-GitHub publishing is complete. Playwright testing has not yet been performed.
+| **Playwright** | Tested the deployed application end-to-end and captured the live proof screenshot |
 
 ---
 
@@ -174,26 +172,26 @@ stockscope/
     └── config.toml
 ```
 
-An `assets/` folder will be added after deployment testing, once Playwright captures a live screenshot.
+The `assets/` folder contains the Playwright proof screenshot captured from the live deployed application.
+
+---
+
+## Live application
+
+[Open StockScope](https://stockscope-fwwhj7hbjgnkpky4zgmmrs.streamlit.app/)
+
+![StockScope live application](assets/stockscope-live.png)
 
 ---
 
 ## Deployment
 
-StockScope will be deployed through Streamlit Community Cloud using:
+StockScope is deployed on Streamlit Community Cloud:
 
-- Public GitHub repository
+- Public GitHub repository: [KlimentinaChapovska/stockscope](https://github.com/KlimentinaChapovska/stockscope)
 - `main` branch
 - `app.py` as the entry point
 - `requirements.txt` for dependency installation
-
-The live URL will be added after deployment.
-
----
-
-## Screenshot
-
-A Playwright screenshot of the deployed application will be added after deployment testing.
 
 ---
 
