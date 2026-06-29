@@ -81,34 +81,34 @@ st.markdown(
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0.9rem 0 0.9rem 0;
+        padding: 1.1rem 0 1.1rem 0;
         border-bottom: 1px solid #1C1C1C;
         margin-bottom: 3rem;
     }
     .product-bar-left {
         display: flex;
         align-items: center;
-        gap: 0.55rem;
+        gap: 0.7rem;
     }
     .product-mark {
         color: #D4AF37;
-        font-size: 0.8rem;
+        font-size: 1.1rem;
         line-height: 1;
     }
     .product-name {
         color: #F5F5F5;
-        font-size: 0.82rem;
+        font-size: 1.15rem;
         font-weight: 800;
         letter-spacing: 0.22em;
     }
     .product-divider {
         color: #2A2A2A;
-        font-size: 0.9rem;
-        margin: 0 0.15rem;
+        font-size: 1.1rem;
+        margin: 0 0.2rem;
     }
     .product-status {
         color: #888888;
-        font-size: 0.68rem;
+        font-size: 0.75rem;
         letter-spacing: 0.08em;
         text-transform: uppercase;
     }
@@ -1422,7 +1422,6 @@ def _apply_chart_theme(fig: go.Figure, height: int = 420, margin: dict | None = 
             orientation="h",
             y=-0.22,
             x=0,
-            itemgap=14,
         ),
         xaxis=dict(
             title="",
