@@ -112,22 +112,6 @@ st.markdown(
         letter-spacing: 0.08em;
         text-transform: uppercase;
     }
-    .product-nav {
-        display: flex;
-        gap: 2.2rem;
-        align-items: center;
-    }
-    .product-nav span {
-        color: #9A9A9A;
-        font-size: 0.72rem;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        cursor: default;
-        transition: color 0.15s;
-    }
-    .product-nav span:hover {
-        color: #E0E0E0;
-    }
 
     /* ═══════════════════════════════════════════════════════
        HERO — LEFT COLUMN
@@ -1368,9 +1352,7 @@ st.markdown(
         .hero-headline {
             font-size: 1.7rem;
         }
-        .product-nav {
-            display: none;
-        }
+
         .summary-block {
             flex-direction: column;
             gap: 1.5rem;
@@ -1635,11 +1617,6 @@ st.markdown(
         <span class="product-name">STOCKSCOPE</span>
         <span class="product-divider">|</span>
         <span class="product-status">Historical Big Tech Explorer</span>
-      </div>
-      <div class="product-nav">
-        <span>Explore</span>
-        <span>Scenarios</span>
-        <span>Insights</span>
       </div>
     </div>
     """,
