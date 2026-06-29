@@ -107,7 +107,7 @@ st.markdown(
         margin: 0 0.15rem;
     }
     .product-status {
-        color: #444444;
+        color: #888888;
         font-size: 0.68rem;
         letter-spacing: 0.08em;
         text-transform: uppercase;
@@ -118,7 +118,7 @@ st.markdown(
         align-items: center;
     }
     .product-nav span {
-        color: #555555;
+        color: #9A9A9A;
         font-size: 0.72rem;
         letter-spacing: 0.1em;
         text-transform: uppercase;
@@ -126,7 +126,7 @@ st.markdown(
         transition: color 0.15s;
     }
     .product-nav span:hover {
-        color: #888888;
+        color: #E0E0E0;
     }
 
     /* ═══════════════════════════════════════════════════════
@@ -151,7 +151,7 @@ st.markdown(
         color: #D4AF37;
     }
     .hero-copy {
-        color: #7A7A7A;
+        color: #9A9A9A;
         font-size: clamp(0.82rem, 1.3vw, 0.95rem);
         line-height: 1.75;
         max-width: 400px;
@@ -162,7 +162,7 @@ st.markdown(
        CONTROLS PANEL  ("BUILD YOUR COMPARISON")
     ═══════════════════════════════════════════════════════ */
     .controls-label {
-        color: #333333;
+        color: #888888;
         font-size: 0.6rem;
         letter-spacing: 0.22em;
         text-transform: uppercase;
@@ -175,7 +175,7 @@ st.markdown(
        HERO — RIGHT COLUMN  (race chart area)
     ═══════════════════════════════════════════════════════ */
     .race-period {
-        color: #3A3A3A;
+        color: #888888;
         font-size: 0.6rem;
         letter-spacing: 0.18em;
         text-transform: uppercase;
@@ -194,14 +194,14 @@ st.markdown(
         margin-top: 1rem;
     }
     .hero-placeholder-label {
-        color: #2A2A2A;
+        color: #888888;
         font-size: 0.62rem;
         letter-spacing: 0.2em;
         text-transform: uppercase;
         margin: 0 0 0.6rem 0;
     }
     .hero-placeholder-text {
-        color: #3A3A3A;
+        color: #888888;
         font-size: 0.88rem;
         line-height: 1.6;
         margin: 0;
@@ -229,7 +229,7 @@ st.markdown(
         font-size: 0.7rem;
         font-weight: 700;
         letter-spacing: 0.1em;
-        color: #555555;
+        color: #9A9A9A;
     }
     .pulse-val {
         font-size: 0.82rem;
@@ -257,7 +257,7 @@ st.markdown(
     }
     [data-testid="stTabs"] button[role="tab"] {
         background-color: transparent !important;
-        color: #3A3A3A !important;
+        color: #9A9A9A !important;
         border: none !important;
         border-bottom: 2px solid transparent !important;
         padding: 0.65rem 1.4rem !important;
@@ -269,8 +269,8 @@ st.markdown(
         transition: color 0.15s ease, border-color 0.15s ease !important;
     }
     [data-testid="stTabs"] button[role="tab"]:hover {
-        color: #888888 !important;
-        border-bottom-color: #333333 !important;
+        color: #E0E0E0 !important;
+        border-bottom-color: #666666 !important;
         background-color: transparent !important;
     }
     [data-testid="stTabs"] button[role="tab"][aria-selected="true"] {
@@ -298,7 +298,7 @@ st.markdown(
         min-width: 140px;
     }
     .summary-sm-label {
-        color: #3A3A3A;
+        color: #8F8F8F;
         font-size: 0.6rem;
         letter-spacing: 0.18em;
         text-transform: uppercase;
@@ -324,14 +324,14 @@ st.markdown(
         align-items: baseline;
     }
     .stat-key {
-        color: #333333;
+        color: #8F8F8F;
         font-size: 0.6rem;
         letter-spacing: 0.12em;
         text-transform: uppercase;
         min-width: 58px;
     }
     .stat-val {
-        color: #888888;
+        color: #C8C8C8;
         font-size: 0.82rem;
     }
     .stat-val-gold {
@@ -350,12 +350,12 @@ st.markdown(
         margin-bottom: 1.2rem;
     }
     .sec-num {
-        color: #1C1C1C;
-        font-size: 4rem;
+        color: #2A2A2A;
+        font-size: 2.8rem;
         font-weight: 900;
         line-height: 1;
         letter-spacing: -0.03em;
-        margin-top: -0.4rem;
+        margin-top: -0.2rem;
         user-select: none;
         flex-shrink: 0;
     }
@@ -367,7 +367,7 @@ st.markdown(
         letter-spacing: -0.01em;
     }
     .chart-sec-desc {
-        color: #444444;
+        color: #888888;
         font-size: 0.78rem;
         margin: 0;
         line-height: 1.5;
@@ -390,7 +390,7 @@ st.markdown(
         box-shadow: none !important;
     }
     [data-testid="stMetricLabel"] > div {
-        color: #2A2A2A !important;
+        color: #888888 !important;
         font-size: 0.58rem !important;
         letter-spacing: 0.22em !important;
         text-transform: uppercase !important;
@@ -412,10 +412,10 @@ st.markdown(
         display: none !important;
     }
     [data-testid="stMetric"] [data-testid="stTooltipHoverTarget"] svg {
-        fill: #2A2A2A !important;
+        fill: #555555 !important;
     }
     [data-testid="stMetric"] [data-testid="stTooltipHoverTarget"]:hover svg {
-        fill: #888888 !important;
+        fill: #C0C0C0 !important;
     }
 
     /* ── Best performer supporting text ── */
@@ -431,14 +431,14 @@ st.markdown(
         background-color: #1A1A1A;
     }
     .bp-divider-label {
-        color: #272727;
+        color: #555555;
         font-size: 0.58rem;
         letter-spacing: 0.22em;
         text-transform: uppercase;
         white-space: nowrap;
     }
     .bp-subtitle {
-        color: #888888;
+        color: #9A9A9A;
         font-size: 0.9rem;
         font-weight: 500;
         line-height: 1.45;
@@ -452,13 +452,13 @@ st.markdown(
         margin: 0 0 1rem 0;
     }
     .bp-clarification {
-        color: #4A4A4A;
+        color: #888888;
         font-size: 0.78rem;
         line-height: 1.65;
         margin: 0 0 0.45rem 0;
     }
     .bp-disclaimer {
-        color: #2E2E2E;
+        color: #888888;
         font-size: 0.7rem;
         font-style: italic;
         margin: 0;
@@ -492,7 +492,7 @@ st.markdown(
         margin: 0 0 0.9rem 0;
     }
     .editorial-ph-desc {
-        color: #555555;
+        color: #888888;
         font-size: 0.88rem;
         line-height: 1.7;
         margin: 0;
@@ -506,7 +506,7 @@ st.markdown(
         margin: 1.5rem 0 !important;
     }
     [data-testid="stCaptionContainer"] p {
-        color: #333333 !important;
+        color: #888888 !important;
         font-size: 0.72rem;
     }
 
@@ -521,7 +521,7 @@ st.markdown(
     }
     [data-testid="stAlert"] p,
     [data-testid="stAlert"] span {
-        color: #666666 !important;
+        color: #8A8A8A !important;
     }
     [data-testid="stAlert"] svg {
         fill: #D4AF37 !important;
@@ -531,12 +531,12 @@ st.markdown(
        DATE INPUT
     ═══════════════════════════════════════════════════════ */
     [data-testid="stDateInput"] label p {
-        color: #555555 !important;
+        color: #C8C8C8 !important;
         font-size: 0.78rem;
     }
     [data-testid="stDateInput"] [data-baseweb="input"] {
         background-color: #161616 !important;
-        border: 1px solid #2A2A2A !important;
+        border: 1px solid #444444 !important;
         border-radius: 6px !important;
     }
     [data-testid="stDateInput"] [data-baseweb="input"]:focus-within {
@@ -552,7 +552,7 @@ st.markdown(
         caret-color: #D4AF37;
     }
     [data-testid="stDateInput"] input::placeholder {
-        color: #444444 !important;
+        color: #666666 !important;
     }
     [data-testid="stDateInput"] [data-baseweb="input"] svg {
         fill: #555555 !important;
@@ -716,7 +716,7 @@ st.markdown(
         padding: 0 !important;
         margin: 0 0 0.4rem 0 !important;
         cursor: default !important;
-        color: #555555 !important;
+        color: #C8C8C8 !important;
         font-size: 0.78rem !important;
         font-weight: 500 !important;
         transition: none !important;
@@ -725,7 +725,7 @@ st.markdown(
     [data-testid="stRadio"] [data-testid="stWidgetLabel"] label:hover {
         background-color: transparent !important;
         border-color: transparent !important;
-        color: #555555 !important;
+        color: #C8C8C8 !important;
     }
     [data-testid="stRadio"] [data-baseweb="radio"] > div:first-child {
         display: none !important;
@@ -734,7 +734,7 @@ st.markdown(
         display: inline-flex !important;
         align-items: center !important;
         background-color: #161616 !important;
-        border: 1px solid #2A2A2A !important;
+        border: 1px solid #444444 !important;
         border-radius: 5px !important;
         padding: 0.38rem 0.85rem !important;
         cursor: pointer !important;
@@ -743,17 +743,17 @@ st.markdown(
     }
     [data-testid="stRadio"] label:has(input[type="radio"]) p,
     [data-testid="stRadio"] label:has(input[type="radio"]) span {
-        color: #666666 !important;
+        color: #AFAFAF !important;
         font-size: 0.8rem !important;
         font-weight: 500 !important;
     }
     [data-testid="stRadio"] label:has(input[type="radio"]):hover {
         background-color: #1E1E1E !important;
-        border-color: #444444 !important;
+        border-color: #888888 !important;
     }
     [data-testid="stRadio"] label:has(input[type="radio"]):hover p,
     [data-testid="stRadio"] label:has(input[type="radio"]):hover span {
-        color: #C0C0C0 !important;
+        color: #E0E0E0 !important;
     }
     [data-testid="stRadio"] label:has(input[type="radio"]:checked) {
         background-color: #D4AF37 !important;
@@ -774,7 +774,7 @@ st.markdown(
     ═══════════════════════════════════════════════════════ */
     [data-testid="stMultiSelect"] [data-baseweb="select"] > div {
         background-color: #161616 !important;
-        border: 1px solid #2A2A2A !important;
+        border: 1px solid #444444 !important;
         border-radius: 6px !important;
     }
     [data-testid="stMultiSelect"] [data-baseweb="select"] > div:focus-within {
@@ -790,10 +790,10 @@ st.markdown(
         caret-color: #D4AF37;
     }
     [data-testid="stMultiSelect"] input::placeholder {
-        color: #444444 !important;
+        color: #666666 !important;
     }
     [data-testid="stMultiSelect"] [data-testid="stWidgetLabel"] p {
-        color: #555555 !important;
+        color: #C8C8C8 !important;
         font-size: 0.78rem !important;
     }
     [data-testid="stMultiSelect"] span[data-baseweb="tag"] {
@@ -804,7 +804,7 @@ st.markdown(
         fill: #111111 !important;
     }
     [data-testid="stMultiSelect"] [data-baseweb="select"] svg {
-        fill: #555555 !important;
+        fill: #888888 !important;
     }
     [data-testid="stMultiSelect"] [data-baseweb="select"] > div:focus-within svg {
         fill: #D4AF37 !important;
@@ -845,12 +845,12 @@ st.markdown(
        NUMBER INPUT
     ═══════════════════════════════════════════════════════ */
     [data-testid="stNumberInput"] [data-testid="stWidgetLabel"] p {
-        color: #555555 !important;
+        color: #C8C8C8 !important;
         font-size: 0.78rem !important;
     }
     [data-testid="stNumberInput"] [data-baseweb="input"] {
         background-color: #161616 !important;
-        border: 1px solid #2A2A2A !important;
+        border: 1px solid #444444 !important;
         border-radius: 6px !important;
     }
     [data-testid="stNumberInput"] [data-baseweb="input"]:focus-within {
@@ -867,11 +867,11 @@ st.markdown(
     }
     [data-testid="stNumberInput"] button {
         background-color: transparent !important;
-        color: #555555 !important;
+        color: #888888 !important;
         border: none !important;
     }
     [data-testid="stNumberInput"] button svg {
-        fill: #555555 !important;
+        fill: #888888 !important;
     }
     [data-testid="stNumberInput"] button:hover svg {
         fill: #D4AF37 !important;
@@ -881,12 +881,12 @@ st.markdown(
        SELECTBOX
     ═══════════════════════════════════════════════════════ */
     [data-testid="stSelectbox"] [data-testid="stWidgetLabel"] p {
-        color: #555555 !important;
+        color: #C8C8C8 !important;
         font-size: 0.78rem !important;
     }
     [data-testid="stSelectbox"] [data-baseweb="select"] > div {
         background-color: #161616 !important;
-        border: 1px solid #2A2A2A !important;
+        border: 1px solid #444444 !important;
         border-radius: 6px !important;
     }
     [data-testid="stSelectbox"] [data-baseweb="select"] > div:focus-within {
@@ -897,7 +897,7 @@ st.markdown(
         border-color: #444444 !important;
     }
     [data-testid="stSelectbox"] [data-baseweb="select"] svg {
-        fill: #555555 !important;
+        fill: #888888 !important;
     }
     [data-testid="stSelectbox"] input {
         color: #C0C0C0 !important;
@@ -952,14 +952,14 @@ st.markdown(
         margin: 0 0 0.7rem 0;
     }
     .calc-intro {
-        color: #666666;
+        color: #9A9A9A;
         font-size: 0.85rem;
         line-height: 1.65;
         max-width: 520px;
         margin: 0 0 1.8rem 0;
     }
     .calc-result-period {
-        color: #2A2A2A;
+        color: #8A8A8A;
         font-size: 0.6rem;
         letter-spacing: 0.18em;
         text-transform: uppercase;
@@ -982,17 +982,17 @@ st.markdown(
         margin: 0 0 1rem 0;
     }
     .calc-rows {
-        border-top: 1px solid #1A1A1A;
+        border-top: 1px solid #2D2D2D;
     }
     .calc-row {
         display: flex;
         justify-content: space-between;
         align-items: baseline;
         padding: 0.5rem 0;
-        border-bottom: 1px solid #161616;
+        border-bottom: 1px solid #2D2D2D;
     }
     .calc-label {
-        color: #444444;
+        color: #B8B8B8;
         font-size: 0.78rem;
     }
     .calc-value {
@@ -1004,10 +1004,10 @@ st.markdown(
     .calc-portfolio-big {
         margin: 0 0 1rem 0;
         padding-bottom: 1rem;
-        border-bottom: 1px solid #1A1A1A;
+        border-bottom: 1px solid #2D2D2D;
     }
     .calc-portfolio-label {
-        color: #333333;
+        color: #B8B8B8;
         font-size: 0.6rem;
         letter-spacing: 0.15em;
         text-transform: uppercase;
@@ -1027,38 +1027,38 @@ st.markdown(
         margin: 0;
     }
     .calc-note {
-        color: #3A3A3A;
+        color: #9A9A9A;
         font-size: 0.72rem;
         font-style: italic;
         margin: 0.5rem 0 0.8rem 0;
     }
     .calc-stale-notice {
-        color: #3A3A3A;
+        color: #9A9A9A;
         font-size: 0.7rem;
         font-style: italic;
         margin-bottom: 0.8rem;
     }
     .calc-disclaimer {
-        color: #252525;
+        color: #7A7A7A;
         font-size: 0.68rem;
         line-height: 1.65;
         font-style: italic;
         margin-top: 1.5rem;
         padding-top: 1rem;
-        border-top: 1px solid #181818;
+        border-top: 1px solid #282828;
     }
     .calc-empty {
-        color: #2E2E2E;
+        color: #8A8A8A;
         font-size: 0.82rem;
         line-height: 1.7;
         padding: 2.5rem 1.5rem;
-        border: 1px dashed #1C1C1C;
+        border: 1px dashed #333333;
         border-radius: 8px;
         text-align: center;
         margin-top: 0.5rem;
     }
     .calc-empty strong {
-        color: #3A3A3A;
+        color: #9A9A9A;
     }
 
     /* ═══════════════════════════════════════════════════════
@@ -1080,7 +1080,7 @@ st.markdown(
         margin: 0 0 0.7rem 0;
     }
     .ins-intro {
-        color: #666666;
+        color: #9A9A9A;
         font-size: 0.85rem;
         line-height: 1.65;
         max-width: 560px;
@@ -1105,7 +1105,7 @@ st.markdown(
         margin-bottom: 0.5rem;
     }
     .ins-block-label {
-        color: #333333;
+        color: #8F8F8F;
         font-size: 0.62rem;
         letter-spacing: 0.12em;
         text-transform: uppercase;
@@ -1126,7 +1126,7 @@ st.markdown(
         margin: 0 0 0.9rem 0;
     }
     .ins-body {
-        color: #888888;
+        color: #9A9A9A;
         font-size: 0.83rem;
         line-height: 1.65;
         margin: 0;
@@ -1140,7 +1140,7 @@ st.markdown(
     }
     .ins-fact-eyebrow {
         display: block;
-        color: #2A2A2A;
+        color: #888888;
         font-size: 0.58rem;
         letter-spacing: 0.22em;
         text-transform: uppercase;
@@ -1162,15 +1162,15 @@ st.markdown(
         font-style: italic;
     }
     .ins-fact-source {
-        color: #444444;
+        color: #888888;
         font-size: 0.7rem;
         margin: 0;
     }
     .ins-fact-link {
-        color: #555555;
+        color: #9A9A9A;
         text-decoration: underline;
         text-underline-offset: 2px;
-        text-decoration-color: #333333;
+        text-decoration-color: #555555;
     }
     .ins-fact-link:hover {
         color: #D4AF37;
@@ -1181,7 +1181,7 @@ st.markdown(
         padding-bottom: 1rem;
     }
     .ins-how-title {
-        color: #444444;
+        color: #888888;
         font-size: 0.65rem;
         font-weight: 600;
         letter-spacing: 0.12em;
@@ -1194,7 +1194,7 @@ st.markdown(
         margin: 0;
     }
     .ins-how-item {
-        color: #3A3A3A;
+        color: #8A8A8A;
         font-size: 0.78rem;
         line-height: 1.65;
         padding: 0.4rem 0 0.4rem 1.2rem;
@@ -1205,7 +1205,7 @@ st.markdown(
         content: "—";
         position: absolute;
         left: 0;
-        color: #2A2A2A;
+        color: #555555;
     }
 
     /* ═══════════════════════════════════════════════════════
@@ -1241,14 +1241,14 @@ st.markdown(
         max-width: 540px;
     }
     .mkt-sep-note {
-        color: #666666;
+        color: #8A8A8A;
         font-size: 0.68rem;
         font-style: italic;
         margin: 0;
         line-height: 1.7;
     }
     .mkt-source {
-        color: #555555;
+        color: #888888;
         font-size: 0.68rem;
         font-style: italic;
         margin: 0.8rem 0 0 0;
@@ -1282,7 +1282,7 @@ st.markdown(
         margin-bottom: 0.6rem;
     }
     .mkt-yf-note {
-        color: #444444;
+        color: #888888;
         font-size: 0.58rem;
         font-style: italic;
         margin: -0.3rem 0 0.5rem 0;
@@ -1314,12 +1314,12 @@ st.markdown(
         margin: 0 0 0.35rem 0;
     }
     .mkt-date {
-        color: #666666;
+        color: #8A8A8A;
         font-size: 0.65rem;
         margin: 0;
     }
     .mkt-unavail {
-        color: #666666;
+        color: #8A8A8A;
         font-size: 0.82rem;
         line-height: 1.65;
         padding: 0.8rem 0;
@@ -1405,6 +1405,47 @@ dataset_max = df["date"].max().date()
 
 CHART_COLORS = ["#F5C542", "#E8E8E8", "#C98B2E", "#9FA8B3", "#FFF1A8", "#D4AF37"]
 RACE_COLORS  = ["#F5C542", "#F28C28", "#D4AF37", "#B8B8B8", "#9FA8B3", "#FFF1B8"]
+
+
+def _apply_chart_theme(fig: go.Figure, height: int = 420, margin: dict | None = None) -> go.Figure:
+    """Apply a consistent dark editorial theme to any Plotly figure."""
+    m = margin or dict(l=65, r=25, t=15, b=60)
+    fig.update_layout(
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="#111111",
+        font=dict(color="#C8C8C8", family="sans-serif", size=11),
+        legend=dict(
+            title_text="",
+            bgcolor="rgba(0,0,0,0)",
+            bordercolor="rgba(0,0,0,0)",
+            font=dict(color="#BFC3C7", size=11),
+            orientation="h",
+            y=-0.22,
+            x=0,
+            itemgap=14,
+        ),
+        xaxis=dict(
+            title="",
+            tickfont=dict(color="#9FA3A8", size=10),
+            gridcolor="rgba(255,255,255,0.08)",
+            linecolor="rgba(255,255,255,0.1)",
+            zeroline=True,
+            zerolinecolor="rgba(212,175,55,0.35)",
+            zerolinewidth=1,
+        ),
+        yaxis=dict(
+            tickfont=dict(color="#9FA3A8", size=10),
+            title_font=dict(color="#AEB3B8", size=10),
+            gridcolor="rgba(255,255,255,0.08)",
+            linecolor="rgba(255,255,255,0.1)",
+            zeroline=True,
+            zerolinecolor="rgba(212,175,55,0.35)",
+            zerolinewidth=1,
+        ),
+        margin=m,
+        height=height,
+    )
+    return fig
 
 # Verified via Fetch MCP on 2026-06-28 from the official Google company-history page.
 # Tool: mcp__fetch__fetch  URL: https://about.google/our-story/
@@ -1565,18 +1606,18 @@ def build_race_chart(growths: dict[str, float], selected: list) -> go.Figure:
         plot_bgcolor="rgba(0,0,0,0)",
         title=dict(
             text="▸  THE BIG TECH RACE",
-            font=dict(color="#2A2A2A", size=9, family="sans-serif"),
+            font=dict(color="#666666", size=9, family="sans-serif"),
             x=0, y=0.99, xanchor="left",
         ),
-        margin=dict(l=5, r=90, t=28, b=5),
+        margin=dict(l=10, r=90, t=28, b=5),
         height=max(190, len(sorted_s) * 70 + 55),
         xaxis=dict(
-            showgrid=True, gridcolor="#181818", zeroline=False,
-            tickfont=dict(color="#333333", size=8),
+            showgrid=True, gridcolor="rgba(255,255,255,0.07)", zeroline=False,
+            tickfont=dict(color="#9FA3A8", size=8),
             ticksuffix="%", range=[x_min, x_max], fixedrange=True,
         ),
         yaxis=dict(
-            showgrid=False, tickfont=dict(color="#888888", size=11),
+            showgrid=False, tickfont=dict(color="#BFC3C7", size=11),
             ticklen=0, fixedrange=True,
             categoryorder="array",
             categoryarray=list(reversed(sorted_s)),
@@ -1908,38 +1949,17 @@ with overview_tab:
         labels={"date": "Date", "value": y_axis_label, "variable": "Stock"},
         color_discrete_sequence=CHART_COLORS[: len(selected)],
     )
+    _apply_chart_theme(fig, height=420)
     fig.update_layout(
-        paper_bgcolor="rgba(0,0,0,0)",
-        plot_bgcolor="#131313",
-        font=dict(color="#F5F5F5", family="sans-serif"),
-        legend=dict(
-            title_text="",
-            bgcolor="rgba(0,0,0,0)",
-            bordercolor="rgba(0,0,0,0)",
-            font=dict(color="#888888", size=11),
-            orientation="h",
-            y=-0.1, x=0,
-        ),
-        xaxis=dict(
-            title="",
-            tickfont=dict(color="#444444", size=9),
-            gridcolor="#1A1A1A",
-            linecolor="#1E1E1E",
-        ),
         yaxis=dict(
             title=y_axis_label,
-            title_font=dict(color="#444444", size=9),
-            tickfont=dict(color="#444444", size=9),
-            gridcolor="#1A1A1A",
-            linecolor="#1E1E1E",
             tickformat=y_tick_fmt,
             ticksuffix=y_tick_suffix,
         ),
-        margin=dict(l=10, r=20, t=10, b=40),
         hovermode="x unified",
     )
     fig.update_traces(
-        line=dict(width=2),
+        line=dict(width=2.5),
         hovertemplate=f"%{{y:{hover_fmt}}}{y_tick_suffix}<extra></extra>",
     )
 
