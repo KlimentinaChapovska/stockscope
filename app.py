@@ -1594,7 +1594,7 @@ def build_race_chart(growths: dict[str, float], selected: list) -> go.Figure:
         height=max(190, len(sorted_s) * 70 + 55),
         xaxis=dict(
             showgrid=True, gridcolor="rgba(255,255,255,0.07)", zeroline=False,
-            tickfont=dict(color="#9FA3A8", size=8),
+            tickfont=dict(color="#9FA3A8", size=12),
             ticksuffix="%", range=[x_min, x_max], fixedrange=True,
         ),
         yaxis=dict(
