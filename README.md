@@ -5,7 +5,7 @@
 StockScope is a beginner-friendly Streamlit application for exploring and comparing the historical performance of six major technology companies. It combines interactive data visualisation, a hypothetical investment calculator, plain-language insights, and a separate real-world market snapshot — all in a single, clean interface.
 
 **Live app:** Coming after deployment  
-**Repository:** This repository
+**Repository:** [github.com/KlimentinaChapovska/stockscope](https://github.com/KlimentinaChapovska/stockscope)
 
 ---
 
@@ -123,11 +123,11 @@ This project was built with Claude Code and the following MCP (Model Context Pro
 | **Filesystem** | Inspected and managed all project files during development |
 | **Context7** | Looked up current Streamlit API documentation (`st.metric`, `st.form`, `st.session_state`) |
 | **Fetch** | Retrieved and verified the company fact used in the Insights tab from an official source |
-| **GitHub** | Will publish and manage the public repository |
+| **GitHub** | Published and manages the public repository |
 | **Mermaid** | Generated and validated the architecture diagram above |
 | **Playwright** | Will test and screenshot the deployed application |
 
-GitHub publishing and Playwright testing have not yet been performed.
+GitHub publishing is complete. Playwright testing has not yet been performed.
 
 ---
 
@@ -136,11 +136,9 @@ GitHub publishing and Playwright testing have not yet been performed.
 ### 1. Clone the repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/KlimentinaChapovska/stockscope.git
 cd stockscope
 ```
-
-The repository URL will be added after publication.
 
 ### 2. Create a virtual environment
 
