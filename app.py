@@ -1608,6 +1608,128 @@ def build_race_chart(growths: dict[str, float], selected: list) -> go.Figure:
     return fig
 
 
+# ── Monthly return heatmap ────────────────────────────────────────────────────
+def build_monthly_heatmap(df: pd.DataFrame, selected: list) -> go.Figure | None:
+    """
+    Returns a Plotly heatmap of month-over-month percentage returns for each
+    selected ticker.  Returns None when there are fewer than 2 month-end
+    observations in the filtered date range (not enough data to compute a change).
+    """
+    if not selected or df is None or df.empty:
+        return None
+
+    # Resample each ticker to month-end close prices, then compute MoM % change.
+    # The first month always produces NaN (no prior month) and is dropped.
+    monthly_returns: dict[str, pd.Series] = {}
+    for ticker in selected:
+        series = df.set_index("date")[ticker].resample("ME").last()
+        pct = series.pct_change() * 100
+        pct = pct.dropna()
+        if not pct.empty:
+            monthly_returns[ticker] = pct
+
+    if not monthly_returns:
+        return None
+
+    all_months = sorted(set().union(*[s.index for s in monthly_returns.values()]))
+    if not all_months:
+        return None
+
+    month_labels = [m.strftime("%b %Y") for m in all_months]
+
+    # Build z (float or None), display text, and hover text matrices.
+    z, text_matrix, hover_matrix = [], [], []
+    for ticker in selected:
+        s = monthly_returns.get(ticker)
+        row_z, row_t, row_h = [], [], []
+        for m, label in zip(all_months, month_labels):
+            if s is not None and m in s.index and pd.notna(s[m]):
+                val = float(s[m])
+                row_z.append(val)
+                sign = "+" if val >= 0 else "−"
+                row_t.append(f"{sign}{abs(val):.1f}%")
+                row_h.append(f"<b>{ticker}</b><br>{label}<br>{sign}{abs(val):.2f}%")
+            else:
+                row_z.append(None)
+                row_t.append("")
+                row_h.append(f"<b>{ticker}</b><br>{label}<br>No data")
+        z.append(row_z)
+        text_matrix.append(row_t)
+        hover_matrix.append(row_h)
+
+    # Symmetric colour range centred on zero; at least ±1 so the scale is valid.
+    flat = [v for row in z for v in row if v is not None]
+    abs_max = max(abs(min(flat)), abs(max(flat)), 1.0) if flat else 10.0
+
+    # Diverging scale: dark-red → charcoal at zero → gold
+    colorscale = [
+        [0.00, "#7A1515"],
+        [0.35, "#A83030"],
+        [0.46, "#2D2D2D"],
+        [0.50, "#333333"],
+        [0.54, "#2D2D2D"],
+        [0.65, "#9A7A1A"],
+        [1.00, "#F5C542"],
+    ]
+
+    n_months = len(all_months)
+    n_stocks = len(selected)
+    angle = -45 if n_months > 8 else 0
+    bottom_margin = 90 if angle != 0 else 55
+    height = max(160 + n_stocks * 52, 220)
+
+    fig = go.Figure(go.Heatmap(
+        z=z,
+        x=month_labels,
+        y=selected,
+        text=text_matrix,
+        texttemplate="%{text}",
+        hovertext=hover_matrix,
+        hoverinfo="text",
+        colorscale=colorscale,
+        zmid=0,
+        zmin=-abs_max,
+        zmax=abs_max,
+        xgap=2,
+        ygap=2,
+        colorbar=dict(
+            title=dict(
+                text="Monthly<br>return",
+                font=dict(color="#AFAFAF", size=10),
+            ),
+            tickfont=dict(color="#AFAFAF", size=10),
+            ticksuffix="%",
+            outlinecolor="rgba(0,0,0,0)",
+            thickness=14,
+        ),
+    ))
+
+    fig.update_layout(
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="#111111",
+        font=dict(color="#C8C8C8", family="sans-serif", size=11),
+        height=height,
+        margin=dict(l=60, r=90, t=8, b=bottom_margin),
+        xaxis=dict(
+            side="bottom",
+            tickangle=angle,
+            tickfont=dict(color="#AFAFAF", size=10),
+            showgrid=False,
+            linecolor="rgba(0,0,0,0)",
+            fixedrange=True,
+        ),
+        yaxis=dict(
+            tickfont=dict(color="#AFAFAF", size=11),
+            showgrid=False,
+            linecolor="rgba(0,0,0,0)",
+            autorange="reversed",
+            fixedrange=True,
+        ),
+    )
+
+    return fig
+
+
 # ── Product bar ────────────────────────────────────────────────────────────────
 st.markdown(
     """
@@ -2332,6 +2454,55 @@ with insights_tab:
                   <p class="ins-block-label">Performance spread</p>
                   {ins03_stat_html}
                   <p class="ins-body">{ins03_body}</p>
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+
+        # ── Monthly return heatmap (full width) ──────────────────────────────────
+        st.markdown(
+            """
+            <div style="margin-top:2.5rem;padding-top:2rem;border-top:1px solid #1A1A1A">
+              <p class="ins-eyebrow">MONTHLY PERFORMANCE MAP</p>
+              <p style="color:#9A9A9A;font-size:0.83rem;line-height:1.6;
+                        max-width:580px;margin:0 0 0.4rem 0">
+                Each cell shows the stock's percentage change from the previous month.
+                Gold represents positive months, while red represents negative months.
+              </p>
+              <p style="color:#888888;font-size:0.72rem;font-style:italic;margin:0 0 1rem 0">
+                Historical data only — based on the selected companies and date range.
+              </p>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
+        _heatmap_fig = build_monthly_heatmap(filtered_df, selected)
+        if _heatmap_fig is None:
+            st.markdown(
+                '<p style="color:#888888;font-size:0.82rem;font-style:italic">'
+                "Select a longer date range to calculate monthly returns."
+                "</p>",
+                unsafe_allow_html=True,
+            )
+        else:
+            st.plotly_chart(
+                _heatmap_fig,
+                use_container_width=True,
+                config={"displayModeBar": False},
+            )
+            st.markdown(
+                """
+                <div class="ins-how-section" style="margin-top:0.5rem">
+                  <h3 class="ins-how-title">How to read this</h3>
+                  <ul class="ins-how-list">
+                    <li class="ins-how-item">Gold months increased from the previous month.</li>
+                    <li class="ins-how-item">Red months decreased from the previous month.</li>
+                    <li class="ins-how-item">Stronger colour means a larger monthly movement.</li>
+                  </ul>
+                  <p style="color:#7A7A7A;font-size:0.68rem;font-style:italic;margin-top:0.6rem">
+                    This is a historical illustration only and does not constitute investment advice.
+                  </p>
                 </div>
                 """,
                 unsafe_allow_html=True,

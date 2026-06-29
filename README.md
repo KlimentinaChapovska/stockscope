@@ -33,7 +33,7 @@ The application lets you:
 - **Best performer block** — headline metric highlighting the top stock, average growth, and performance spread
 - **01 Overview tab** — editorial summary (company count, period, highest, lowest) and a historical line chart
 - **02 What If? calculator** — three modes: One stock, Compare all companies, Split equally across a portfolio
-- **03 Insights tab** — three dynamic observations drawn from the live selection, plus a verified company fact
+- **03 Insights tab** — three dynamic observations, monthly return heatmap showing strong and weak periods for selected stocks, plus a verified company fact
 - **Separate latest-market snapshot** — recent closing price, daily change, and date per ticker via yfinance; clearly marked as distinct from the historical series
 - **Responsive dark interface** — charcoal-and-gold editorial design that adapts to narrower screens
 - **Graceful onboarding** — styled prompt shown before any stock is selected; per-ticker failure handling in the market snapshot
