@@ -92,23 +92,23 @@ st.markdown(
     }
     .product-mark {
         color: #D4AF37;
-        font-size: 1.1rem;
+        font-size: 1.6rem;
         line-height: 1;
     }
     .product-name {
         color: #F5F5F5;
-        font-size: 1.15rem;
+        font-size: 1.65rem;
         font-weight: 800;
         letter-spacing: 0.22em;
     }
     .product-divider {
         color: #2A2A2A;
-        font-size: 1.1rem;
-        margin: 0 0.2rem;
+        font-size: 1.6rem;
+        margin: 0 0.3rem;
     }
     .product-status {
         color: #888888;
-        font-size: 0.75rem;
+        font-size: 0.82rem;
         letter-spacing: 0.08em;
         text-transform: uppercase;
     }
